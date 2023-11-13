@@ -6,6 +6,7 @@ You will need a terminal and enter the following command :
 "npm init -y"
 "npm install typescript --save-dev"
 "npm install @types/node --save-dev"
+"npx tsc --init --rootDir src --outDir build --esModuleInterop --resolveJsonModule --lib es6 --module commonjs --allowJs true --noImplicitAny true"
 If you want you can modify the "src/index.ts".
 Build the index.ts file with "npx tsc" in terminal.
 Then you can run your website by typing "node build/index.js".
