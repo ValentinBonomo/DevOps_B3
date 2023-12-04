@@ -6,6 +6,6 @@ COPY tsconfig.json ./
 COPY . .
 RUN groupadd -r group && useradd -r -g group user
 RUN chown -R user:group /usr/src/app
-USER appuser
+USER user
 EXPOSE 3000
 CMD [ "node", "build/index.js" ]
