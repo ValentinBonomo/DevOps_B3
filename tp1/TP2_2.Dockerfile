@@ -1,6 +1,7 @@
 FROM node:latest
 WORKDIR /usr/src/app
 COPY --from=build /usr/src/app/build ./build
+RUN npm install os
 RUN groupadd -r group && useradd -r -g group user
 RUN chown -R user:group /usr/src/app
 USER user
